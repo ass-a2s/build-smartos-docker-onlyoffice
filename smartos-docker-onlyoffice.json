@@ -1,0 +1,43 @@
+{
+  "brand": "lx",
+  "kernel_version": "4.4.0",
+  "image_uuid": "d9a82921-2090-0d15-b2c4-e7d43024963a",
+  "autoboot": true,
+  "alias": "smartos-docker-onlyoffice",
+  "hostname": "smartos-docker-onlyoffice",
+  "delegate_dataset": true,
+  "resolvers": [
+     "9.9.9.9",
+     "149.112.112.112"
+  ],
+  "max_physical_memory": 4096,
+  "max_swap": 4608,
+  "tmpfs": 4608,
+  "quota": 50,
+  "cpu_cap": 200,
+  "cpu_shares": 100,
+  "max_lwps": 2000,
+  "nics": [
+     {
+        "nic_tag": "haproxy1",
+        "ip": "10.0.73.13",
+        "ips": ["10.0.73.13/22", "addrconf"],
+        "netmask": "255.255.252.0",
+        "gateway": "10.0.72.100",
+        "primary": true
+     }
+  ],
+  "docker": "true",
+  "internal_metadata": {
+     "docker:cmd": "[\"/bin/sh\", \"-c\", \"bash -C '/app/onlyoffice/run-document-server.sh';'bash'\"]",
+     "docker:env": "[\"PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin\", \"LANG=en_US.UTF-8\", \"LANGUAGE=en_US:en\", \"LC_ALL=en_US.UTF-8\",  \"DEBIAN_FRONTEND=noninteractive\"]",
+     "docker:workingdir": "/data",
+     "docker:workdir": "/data",
+     "docker:tty": true,
+     "docker:attach_stdin": true,
+     "docker:attach_stdout": true,
+     "docker:attach_stderr": true,
+     "docker:open_stdin": true
+  }
+}
+
